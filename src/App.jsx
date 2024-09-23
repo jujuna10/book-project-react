@@ -7,7 +7,8 @@ import ChildrenBook from './components/ChildrenBook';
 import SpecialBook from './components/SpecialBook';
 import Footer from './components/Footer';
 import Cart from './components/Cart';
-
+import AllSpecialBook from './components/AllSpecialBook';
+import AllChildrenBook from './components/AllChildrenBook';
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
       <Routes>
         <Route path="/all" element={<AllProduct />} />
         <Route path="/" element={<><Header /><NewProductContainer /> <ChildrenBook /> <SpecialBook /> <Footer /> <Cart /> </>} />
+        <Route path="/special" element={<AllSpecialBook />} />
+        <Route path="/children" element={<AllChildrenBook />} />
 
       </Routes>
     </div>

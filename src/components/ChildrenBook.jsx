@@ -57,7 +57,7 @@ export default function ChildrenBook() {
             <div className='max-w-[900px] ml-[25%] pt-[50px] pb-[50px] flex flex-col gap-[20px]' >
             <div className='flex gap-[20px] justify-between'>
               <h1 className='underline decoration-solid decoration-blue-900 hover:cursor-pointer'>Children books</h1>
-              <Link to='/all'><h1 className='-translate-x-[128%] hover:cursor-pointer border p-[5px] w-[100px] text-center hover:text-blue-800 hover:border-blue-800 rounded-[10px] duration-200'>See All</h1></Link>
+              <Link to='/children'><h1 className='-translate-x-[128%] hover:cursor-pointer border p-[5px] w-[100px] text-center hover:text-blue-800 hover:border-blue-800 rounded-[10px] duration-200'>See All</h1></Link>
             </div>
             <Slider {...settings} className='flex justify-center'>
                 {bookCovers.map((item, index) => (
