@@ -14,10 +14,22 @@ import book8 from '../assets/book8.webp'
 import book9 from '../assets/book9.png'
 import book11 from '../assets/book11.webp'
 import book12 from '../assets/book12.jpg'
+import { DataContext } from './dataContext/dataContext';
+import { useContext, useState } from 'react'
+
+
+
 
 
 
 export default function ChildrenBook() {
+
+    const {childrenBook,setChildrenBook} = useContext(DataContext)
+
+
+    const handleAddChildrenBook = (priceOfChildrenBook) => {
+      setChildrenBook((prev) => prev + priceOfChildrenBook)
+    }
 
     const bookCovers = [
         book1,book2,book3,book4,book5,book6,book7,book8,book9,book11,book12
@@ -27,17 +39,10 @@ export default function ChildrenBook() {
         "Name1","Name2","Name3","Name4","Name5","Name6","Name7","Name8","Name9","Name10","Namw11"
     ]
     const prices = [
-        '10$','12$','15$','20$','10$','9$','19$','12$','17$','14$','20$'
+        '10','12','15','20','10','9','1','12','17','14','20'
     ]
     
-    
-      
-          
-      
-      
-      
-
-      const settings = {
+    const settings = {
         dots: true,
         infinite: true,
         slidesToShow: 4,
@@ -59,8 +64,8 @@ export default function ChildrenBook() {
                 <div key={index} className='flex flex-col items-center'>
                     <img src={item} className='w-[150px] h-[200px]' />
                     <p>{bookName[index]}</p>
-                    <p className='font-bold'>{prices[index]}</p>
-                    <button className='rounded-[20px] mb-[20px] bg-[rgb(230,213,230)] p-[5px] w-[120px] hover:cursor-pointer shadow-inner hover:shadow-lg duration-200'>Add to cart</button>
+                    <p className='font-bold'>{prices[index]}$</p>
+                    <button className='rounded-[20px] mb-[20px] bg-[rgb(230,213,230)] p-[5px] w-[120px] hover:cursor-pointer shadow-inner hover:shadow-lg duration-200' onClick={() => handleAddChildrenBook(Number(prices[index]))}>Add to cart</button>
                 </div>
                 ))}
             </Slider>

@@ -24,7 +24,7 @@ export default function NewProductContainer() {
     ]
 
     const prices = [
-        '10$','12$','15$','20$','10$','9$','19$','12$','17$','14$'
+        '10','12','15','20','10','9','19','12','17','14'
     ]
 
     const settings = {

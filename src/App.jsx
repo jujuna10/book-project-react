@@ -6,6 +6,7 @@ import AllProduct from './components/AllProduct';
 import ChildrenBook from './components/ChildrenBook';
 import SpecialBook from './components/SpecialBook';
 import Footer from './components/Footer';
+import Cart from './components/Cart';
 
 
 
@@ -22,7 +23,7 @@ function App() {
 
       <Routes>
         <Route path="/all" element={<AllProduct />} />
-        <Route path="/" element={<><Header /><NewProductContainer /> <ChildrenBook /> <SpecialBook /> <Footer /> </>} />
+        <Route path="/" element={<><Header /><NewProductContainer /> <ChildrenBook /> <SpecialBook /> <Footer /> <Cart /> </>} />
 
       </Routes>
     </div>
